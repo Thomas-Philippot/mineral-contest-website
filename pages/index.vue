@@ -5,7 +5,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="https://i.pinimg.com/originals/e9/45/f5/e945f50264503c78fa0b22421177c9b9.jpg"
+              src="img/main.png"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -72,26 +72,33 @@
               max-width="720"
             >
               Mineral Contest est un mode de jeux Minecraft, proposer pas Squeezie lors de ces live du Jeudi soir. Le but du jeux est de miner des ressources afin de faire gagner des points à son équipe.
-              L'équipe qui termine la partie avec le plus de point l'emporte.
+              L'équipe qui termine la partie avec le plus de point l'emporte. Cette version est une adaptation de ce plugins fait par des membres du serveur discord 'Marrons'
             </v-responsive>
 
-            <v-avatar
-              class="elevation-12 mb-12"
-              size="128"
-            >
-              <v-img src="https://cdn.vuetifyjs.com/images/john.png"></v-img>
-            </v-avatar>
+
+            <v-hover v-slot:default="{ hover }">
+              <a href="https://discord.gg/jyGaS2W" target="_blank">
+                <v-avatar
+                  :class="hover ? 'elevation-14' : 'elevation-4'"
+                  class="mb-12"
+                  size="128"
+                >
+                  <v-img src="https://cdn.discordapp.com/icons/373604759715840001/b5bd7adfd0f4dd74321283ea745a0c4a.png"></v-img>
+                </v-avatar>
+              </a>
+            </v-hover>
 
             <div></div>
 
             <v-btn
               color="grey"
-              href="https://vuetifyjs.com"
+              href="https://github.com/kaq666/mineral-contest/blob/master/README.md"
+              target="_blank"
               outlined
               large
             >
             <span class="grey--text text--darken-1 font-weight-bold">
-              Vuetify Documentation
+              Documentation
             </span>
             </v-btn>
           </v-container>
@@ -164,7 +171,7 @@
         <section id="stats">
           <v-parallax
             :height="$vuetify.breakpoint.smAndDown ? 1000 : 500"
-            src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+            src="/img/in-action.png"
           >
             <v-container fill-height>
               <v-row class="mx-auto">
@@ -204,7 +211,7 @@
 
             <v-row>
               <v-col
-                v-for="({ src, text, title }, i) in downloads"
+                v-for="({ src, text, title, link }, i) in downloads"
                 :key="i"
                 cols="12"
                 md="4"
@@ -229,8 +236,12 @@
                 <v-btn
                   class="ml-n4 font-weight-black"
                   text
+                  outlined
+                  nuxt
+                  :to="link"
+                  color="secondary"
                 >
-                  Continue Reading
+                  Voir
                 </v-btn>
               </v-col>
             </v-row>
@@ -239,16 +250,16 @@
           <div class="py-12"></div>
         </section>
 
-        <section id="stats">
+        <section id="arena">
           <v-parallax
             :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+            src="img/thumbnails/arena.png"
           >
             <v-container fill-height>
               <v-row class="mx-auto">
-                <v-col class="text-center" md="12">
+                <v-col class="text-center text-arena" md="12">
                   <h1 class="display-3 font-weight-bold mb-4">Arène</h1>
-                  <p class="display-1 font-weight-thin">Afin de pimenter la partie, une arène est placé entre toutes les bases sécuriser des équipes.
+                  <p class="display-1 font-weight-light">Afin de pimenter la partie, une arène est placé entre toutes les bases sécuriser des équipes.
                     Des coffre y apparaitrons et il faudra se battre pour y récuperer son contenu
                   </p>
                 </v-col>
@@ -256,7 +267,6 @@
             </v-container>
           </v-parallax>
         </section>
-
       </v-content>
   </div>
 </template>
@@ -270,19 +280,22 @@ export default {
     return {
       downloads: [
         {
-          src: 'https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80',
+          src: 'img/thumbnails/maps.png',
           title: 'Maps',
           text: 'Télécharger les mondes minecraft avec les bases de chaque équipe et l\'arène. Prêt à démarrer une partie.',
+          link: '/maps'
         },
         {
           src: 'https://media.forgecdn.net/attachments/125/517/bukkit.png',
           title: 'Le Plugins',
           text: 'Télécharge le plugins pour l\'installer sur ton serveur Bukkit. Avec toutes les insrtuction d\'installation.',
+          link: '/plugins'
         },
         {
-          src: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1892&q=80',
+          src: 'img/thumbnails/stuctures.png',
           title: 'Structures',
           text: 'Tu à envie de créer ta propre map ? Télécharge les structures des bases et de l\'arène et créer ton monde !',
+          link: '/structures'
         },
       ],
       features: [
@@ -312,3 +325,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .text-arena {
+    text-shadow: 2px 2px 10px black;
+  }
+</style>

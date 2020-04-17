@@ -19,6 +19,23 @@
     <v-toolbar-title class="font-weight-black headline">
       Mineral Contest
     </v-toolbar-title>
+    <v-spacer />
+    <v-btn
+      class="mx-2"
+      color="primary"
+      nuxt
+      to="/"
+    >
+      Home
+    </v-btn>
+    <v-btn
+      v-if="$route.fullPath === '/'"
+      class="mx-2"
+      color="primary"
+      @click="$vuetify.goTo('#downloads')"
+    >
+      Downloads
+    </v-btn>
   </v-app-bar>
 </template>
 
