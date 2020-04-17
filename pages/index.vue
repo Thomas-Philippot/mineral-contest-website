@@ -322,6 +322,11 @@ export default {
         {image: 'emerald.png', altText: 'emeraude', value: '+300'},
       ]
     }
+  },
+  head () {
+    return {
+      title: 'Home'
+    }
   }
 }
 </script>

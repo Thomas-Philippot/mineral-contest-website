@@ -6,12 +6,12 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    titleTemplate: '%s - ' + 'Mineral Contest',
+    title: 'Mineral Contest',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'Un plugin minecraft pour server Bukkit 1.14.4' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -36,12 +36,26 @@ export default {
   */
   buildModules: [
     '@nuxtjs/vuetify',
+    '@nuxtjs/google-analytics'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/sitemap',
+    '@nuxtjs/robots'
   ],
+  sitemap: {
+    hostname: 'https://mineral-contest.netlify.app'
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
+  },
+  googleAnalytics: {
+    id: 'UA-147974021-2'
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module
