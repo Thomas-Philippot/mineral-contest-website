@@ -36,14 +36,6 @@
                 <v-icon>mdi-download</v-icon>
                 Télécharger
               </v-btn>
-              <v-btn
-                color="secondary"
-                outlined
-                nuxt
-                :to="`/maps/${item.name}`"
-              >
-                Voir
-              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -64,15 +56,23 @@ export default {
           description: 'Une map dans la neige, avec d\'énormes montagne à proximité.',
           biome: 'Jungle',
           name: 'snow',
-          image: '/img/maps/snow/arena.png'
+          image: '/img/maps/snow.png'
         },
         {
           title: 'Desert Map',
           description: 'Une map dans le desert avec de nombreuses grottes et faille.',
           biome: 'Desert',
           name: 'desert',
-          image: '/img/maps/desert/overview.png'
+          image: '/img/maps/desert.png'
         }
+      ]
+    }
+  },
+  head () {
+    return {
+      title: 'Maps',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Télécharger les différentes maps existante et tester par la communauté' }
       ]
     }
   }

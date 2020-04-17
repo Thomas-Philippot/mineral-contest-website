@@ -9,7 +9,15 @@
 
 <script>
 export default {
-    name: 'Structures'
+  name: 'Structures',
+  head () {
+    return {
+      title: 'Mineral Contest - Structures',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Télécharger les structures pour créer votre map Mineral Contest' }
+      ]
+    }
+  }
 }
 </script>
 
