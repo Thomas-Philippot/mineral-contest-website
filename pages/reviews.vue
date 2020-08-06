@@ -29,9 +29,17 @@
           </v-list>
         </v-card-text>
         <v-card-actions v-if="loggedIn">
-          <v-textarea class="mx-4" label="Saisie ton avis" v-model="newItem.review" />
-          <v-rating v-model="newItem.rating" />
-          <v-btn color="primary" class="mx-2" @click="sendReview">Envoyé</v-btn>
+          <v-row align="center">
+            <v-col cols="12" md="8">
+              <v-textarea class="mx-4" label="Saisie ton avis" v-model="newItem.review" />
+            </v-col>
+            <v-col cols="6" md="2">
+              <v-rating dense v-model="newItem.rating" />
+            </v-col>
+            <v-col cols="6" md="1" class="text-right">
+              <v-btn color="primary" class="mx-2" @click="sendReview">Envoyé</v-btn>
+            </v-col>
+          </v-row>
         </v-card-actions>
         <v-card-actions v-else>
           <v-spacer />
