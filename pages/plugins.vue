@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-main>
     <v-container>
       <h1>Plugins</h1>
       <p>Le plugin existe sous différentes version, choisie celle que tu souhaite</p>
@@ -41,7 +41,7 @@
         </v-timeline-item>
       </v-timeline>
     </v-container>
-  </v-content>
+  </v-main>
 </template>
 
 <script>

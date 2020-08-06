@@ -1,6 +1,6 @@
 <template>
   <div>
-      <v-content>
+      <v-main>
         <section id="hero">
           <v-row no-gutters>
             <v-img
@@ -23,7 +23,7 @@
                       class="font-weight-light"
                       :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
                     >
-                      WELCOME TO
+                      BIENVENUE DANS
                     </span>
 
                       <br>
@@ -267,7 +267,7 @@
             </v-container>
           </v-parallax>
         </section>
-      </v-content>
+      </v-main>
   </div>
 </template>
 
