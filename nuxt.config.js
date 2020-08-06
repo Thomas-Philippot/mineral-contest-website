@@ -29,8 +29,7 @@ export default {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-  ],
+  plugins: [{ src: '~/plugins/localStorage.js', ssr: false }],
   /*
   ** Nuxt.js dev-modules
   */
@@ -42,9 +41,26 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
     '@nuxtjs/sitemap',
-    '@nuxtjs/robots'
+    '@nuxtjs/robots',
+    '@nuxtjs/firebase'
   ],
+  firebase: {
+    config: {
+      apiKey: "AIzaSyBnGbOmoQlDGJswRgr5_oR8tCgijQj_Ac0",
+      authDomain: "mineral-contest.firebaseapp.com",
+      databaseURL: "https://mineral-contest.firebaseio.com",
+      projectId: "mineral-contest",
+      storageBucket: "mineral-contest.appspot.com",
+      messagingSenderId: "194505836837",
+      appId: "1:194505836837:web:5324652dd9aa074f95f2cc"
+    },
+    services: {
+      auth: true,
+      firestore: true
+    }
+  },
   sitemap: {
     hostname: 'https://mineral-contest.netlify.app'
   },
@@ -62,6 +78,9 @@ export default {
   */
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    defaultAssets: {
+      icons: 'fa'
+    },
     theme: {
       dark: false,
       themes: {

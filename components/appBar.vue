@@ -26,22 +26,60 @@
       nuxt
       to="/"
     >
-      Home
+      <v-icon left>fa-home</v-icon>Accueil
     </v-btn>
     <v-btn
-      v-if="$route.fullPath === '/'"
       class="mx-2"
       color="primary"
-      @click="$vuetify.goTo('#downloads')"
+      nuxt
+      to="/reviews"
     >
-      Downloads
+      <v-icon left>fa-star</v-icon>
+      Avis
     </v-btn>
+    <v-menu
+      v-if="loggedIn"
+      class="mx-2"
+      offset-y
+    >
+      <template v-slot:activator="{ on }">
+        <v-btn
+          icon
+          v-on="on"
+        >
+          <v-avatar>
+            <v-img :src="user.avatar" alt="user image"/>
+          </v-avatar>
+        </v-btn>
+      </template>
+      <v-list >
+        <v-list-item color="primary" @click="logout">
+          <v-list-item-title><v-icon left>fa-sign-out-alt</v-icon>Déconnexion</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-menu>
+
   </v-app-bar>
 </template>
 
 <script>
   export default {
-    name: "AppBar"
+    name: "AppBar",
+    computed: {
+      user () {
+        return this.$store.state.user
+      },
+      loggedIn () {
+        return this.$store.state.user !== null
+      }
+    },
+    methods: {
+      logout () {
+        this.$fireAuth.signOut().then(() => {
+          this.$store.commit('setUser', null)
+        })
+      }
+    }
   }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-      <v-content>
+      <v-main>
         <section id="hero">
           <v-row no-gutters>
             <v-img
@@ -23,7 +23,7 @@
                       class="font-weight-light"
                       :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
                     >
-                      WELCOME TO
+                      BIENVENUE DANS
                     </span>
 
                       <br>
@@ -43,7 +43,7 @@
                       outlined
                       @click="$vuetify.goTo('#about-me')"
                     >
-                      <v-icon>mdi-chevron-double-down</v-icon>
+                      <v-icon>fa-chevron-down</v-icon>
                     </v-btn>
                   </v-row>
                 </v-container>
@@ -267,7 +267,7 @@
             </v-container>
           </v-parallax>
         </section>
-      </v-content>
+      </v-main>
   </div>
 </template>
 
@@ -300,17 +300,17 @@ export default {
       ],
       features: [
         {
-          icon: 'mdi-account-group-outline',
+          icon: 'fa-users',
           title: 'Equipes',
           text: '6 Joueurs s\'affronte par équipe de deux. (Rouge, Bleue, Jaune)'
         },
         {
-          icon: 'mdi-update',
+          icon: 'fa-clock',
           title: 'Durée de la partie',
           text: 'Une partie dure une heure.',
         },
         {
-          icon: 'mdi-shield-outline',
+          icon: 'fa-gem',
           title: 'Coffre aléatoire',
           text: 'Durant la partie des coffre à butin apparaissent de manière aléatoire.',
         },

@@ -1,10 +1,10 @@
 <template>
-  <v-content>
+  <v-main>
     <v-container>
       <h1>Structures</h1>
       <p>This page is under construction</p>
     </v-container>
-  </v-content>
+  </v-main>
 </template>
 
 <script>
