@@ -36,6 +36,14 @@
     >
       Downloads
     </v-btn>
+    <v-btn
+      class="mx-2"
+      color="primary"
+      nuxt
+      to="/reviews"
+    >
+      Reviews
+    </v-btn>
   </v-app-bar>
 </template>
 

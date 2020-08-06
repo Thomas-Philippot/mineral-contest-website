@@ -43,7 +43,7 @@
                       outlined
                       @click="$vuetify.goTo('#about-me')"
                     >
-                      <v-icon>mdi-chevron-double-down</v-icon>
+                      <v-icon>fa-chevron-down</v-icon>
                     </v-btn>
                   </v-row>
                 </v-container>
@@ -300,17 +300,17 @@ export default {
       ],
       features: [
         {
-          icon: 'mdi-account-group-outline',
+          icon: 'fa-users',
           title: 'Equipes',
           text: '6 Joueurs s\'affronte par équipe de deux. (Rouge, Bleue, Jaune)'
         },
         {
-          icon: 'mdi-update',
+          icon: 'fa-clock',
           title: 'Durée de la partie',
           text: 'Une partie dure une heure.',
         },
         {
-          icon: 'mdi-shield-outline',
+          icon: 'fa-gem',
           title: 'Coffre aléatoire',
           text: 'Durant la partie des coffre à butin apparaissent de manière aléatoire.',
         },
