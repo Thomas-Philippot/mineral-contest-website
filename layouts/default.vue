@@ -1,6 +1,16 @@
 <template>
   <v-app>
-    <app-bar />
+    <app-bar
+      :handle-logout="logout"
+    />
+    <v-snackbar
+      :timeout="3000"
+      :value="snack"
+      bottom
+      color="success"
+    >
+      Vous êtes déconnecté.
+    </v-snackbar>
     <nuxt />
     <the-footer />
   </v-app>
@@ -13,6 +23,7 @@ export default {
   components: {TheFooter, AppBar},
   data () {
     return {
+      snack: false,
       clipped: false,
       drawer: false,
       fixed: false,
@@ -32,6 +43,19 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Vuetify.js'
+    }
+  },
+  created() {
+    this.$on('loggedOut', () => {
+      this.snack = true
+    })
+  },
+  methods: {
+    logout () {
+      this.$fireAuth.signOut().then(() => {
+        this.$store.commit('setUser', null)
+        this.snack = true
+      })
     }
   }
 }
