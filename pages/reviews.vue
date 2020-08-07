@@ -125,14 +125,21 @@ export default {
     login () {
       const provider = new this.$fireAuthObj.GoogleAuthProvider
       this.$fireAuth.signInWithPopup(provider).then((response) => {
-        const user = response.user
-        this.$store.commit('setUser', { username: user.displayName, avatar: user.photoURL })
+        const fullUser = response.user
+        console.log(fullUser)
+        const user = {
+          username: fullUser.displayName,
+          avatar: fullUser.photoURL,
+          mail: fullUser.email
+        }
+        this.$store.commit('setUser', user)
       })
     },
     sendReview () {
       const data = {
         review: this.newItem.review,
         rating: this.newItem.rating,
+        mail: this.$store.state.user.mail,
         username: this.$store.state.user.username,
         avatar: this.$store.state.user.avatar,
       }
