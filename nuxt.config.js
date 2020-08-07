@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+require('dotenv').config()
 
 export default {
   mode: 'universal',
@@ -6,8 +7,10 @@ export default {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s - ' + 'Mineral Contest',
     title: 'Mineral Contest',
+    htmlAttrs: {
+      lang: "fr",
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -49,13 +52,13 @@ export default {
   ],
   firebase: {
     config: {
-      apiKey: "AIzaSyBnGbOmoQlDGJswRgr5_oR8tCgijQj_Ac0",
-      authDomain: "mineral-contest.firebaseapp.com",
-      databaseURL: "https://mineral-contest.firebaseio.com",
-      projectId: "mineral-contest",
-      storageBucket: "mineral-contest.appspot.com",
-      messagingSenderId: "194505836837",
-      appId: "1:194505836837:web:5324652dd9aa074f95f2cc"
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      databaseURL: process.env.DATABASE_URL,
+      projectId: process.env.PROJECT_ID,
+      storageBucket: process.env.STORAGE_BUCKET,
+      messagingSenderId: process.env.MESSAGING_SENDER_ID,
+      appId: process.env.APP_ID
     },
     services: {
       auth: true,
