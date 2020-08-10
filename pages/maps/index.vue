@@ -41,6 +41,11 @@
         </v-col>
       </v-row>
     </v-container>
+    <div class="py-6">
+      <v-container>
+        <adsbygoogle />
+      </v-container>
+    </div>
   </v-content>
 </template>
 

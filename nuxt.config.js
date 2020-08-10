@@ -48,8 +48,17 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/firebase'
+    '@nuxtjs/firebase',
+    '@nuxtjs/google-adsense'
   ],
+  sitemap: {
+    hostname: 'https://mineral-contest.netlify.app'
+  },
+  robots: {
+    UserAgent: '*',
+    Disallow: '',
+    Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
+  },
   firebase: {
     config: {
       apiKey: process.env.API_KEY,
@@ -65,16 +74,9 @@ export default {
       firestore: true
     }
   },
-  sitemap: {
-    hostname: 'https://mineral-contest.netlify.app'
-  },
-  robots: {
-    UserAgent: '*',
-    Disallow: '',
-    Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
-  },
-  googleAnalytics: {
-    id: 'UA-147974021-2'
+  'google-adsense': {
+    id: process.env.GOOGLE_AD_ID,
+    test: true
   },
   /*
   ** vuetify module configuration
@@ -99,6 +101,9 @@ export default {
         }
       }
     }
+  },
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   },
   /*
   ** Build configuration
