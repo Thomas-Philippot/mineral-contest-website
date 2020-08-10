@@ -103,7 +103,11 @@
             </v-btn>
           </v-container>
 
-          <div class="py-12"></div>
+          <div class="py-6">
+            <v-container style="background-color: red;">
+              Google ads <adsbygoogle />
+            </v-container>
+          </div>
         </section>
 
         <section
@@ -247,7 +251,11 @@
             </v-row>
           </v-container>
 
-          <div class="py-12"></div>
+          <div class="py-6">
+            <v-container>
+              <adsbygoogle />
+            </v-container>
+          </div>
         </section>
 
         <section id="arena">
