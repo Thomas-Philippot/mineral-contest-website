@@ -103,7 +103,7 @@ export default {
     }
   },
   googleAnalytics: {
-    id: 'UA-147974021-2'
+    id: process.env.GOOGLE_ANALYTICS_ID
   },
   /*
   ** Build configuration
