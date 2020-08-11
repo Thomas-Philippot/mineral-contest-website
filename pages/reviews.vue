@@ -7,30 +7,36 @@
           Laissez votre avis sur le plugin.
         </v-card-subtitle>
         <v-card-text>
-          <v-list
-            three-line
-            disabled
+          <v-skeleton-loader
+            :loading="loading"
+            transition="scale-transition"
+            type="list-item-avatar-three-line"
           >
-            <v-list-item
-              v-for="(item, i) in reviews"
-              :key="i"
+            <v-list
+              three-line
+              disabled
             >
-              <v-list-item-avatar>
-                <v-img :src="item.avatar" alt="reviewer avatar" />
-              </v-list-item-avatar>
-              <v-list-item-content>
-                <v-list-item-title class="font-weight-black">
-                  {{ item.username }}
-                </v-list-item-title>
-                <v-list-item-subtitle class="wrap-text">
-                  {{ item.review }}
-                </v-list-item-subtitle>
-                <v-list-item-action>
-                  <v-rating dense v-model="item.rating" />
-                </v-list-item-action>
-              </v-list-item-content>
-            </v-list-item>
-          </v-list>
+              <v-list-item
+                v-for="(item, i) in reviews"
+                :key="i"
+              >
+                <v-list-item-avatar>
+                  <v-img :src="item.avatar" alt="reviewer avatar" />
+                </v-list-item-avatar>
+                <v-list-item-content>
+                  <v-list-item-title class="font-weight-black">
+                    {{ item.username }}
+                  </v-list-item-title>
+                  <v-list-item-subtitle class="wrap-text">
+                    {{ item.review }}
+                  </v-list-item-subtitle>
+                  <v-list-item-action>
+                    <v-rating dense v-model="item.rating" />
+                  </v-list-item-action>
+                </v-list-item-content>
+              </v-list-item>
+            </v-list>
+          </v-skeleton-loader>
         </v-card-text>
         <v-card-actions v-if="loggedIn">
           <v-row align="center">
@@ -71,6 +77,7 @@ export default {
   data () {
     return {
       reviews: [],
+      loading: true,
       newItem: {
         review: '',
         rating: 0
@@ -120,6 +127,7 @@ export default {
   methods: {
     async getReviews () {
       const documents = await this.$fireStore.collection('reviews').get()
+      this.loading = false
       documents.forEach(doc => {
         this.reviews.push(doc.data())
       })
