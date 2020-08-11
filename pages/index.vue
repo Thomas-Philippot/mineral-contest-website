@@ -71,8 +71,7 @@
               class="mx-auto title font-weight-light mb-8"
               max-width="720"
             >
-              Mineral Contest est un mode de jeux Minecraft, proposer pas Squeezie lors de ces live du Jeudi soir. Le but du jeux est de miner des ressources afin de faire gagner des points à son équipe.
-              L'équipe qui termine la partie avec le plus de point l'emporte. Cette version est une adaptation de ce plugins fait par des membres du serveur discord 'Marrons'
+              Mineral Contest est un mode de jeux Minecraft, proposé par Squeezie lors de ces live du jeudi soir. Le but du jeu est de miner des ressources afin de faire gagner des points à son équipe. L'équipe qui termine la partie avec le plus de points l'emporte. Cette version est une adaptation du jeu fait par des membres du serveur discord 'Marrons'.
             </v-responsive>
 
 
@@ -104,9 +103,6 @@
           </v-container>
 
           <div class="py-6">
-            <v-container>
-              <adsbygoogle />
-            </v-container>
           </div>
         </section>
 
@@ -117,7 +113,9 @@
           <div class="py-12"></div>
 
           <v-container class="text-center">
-            <h2 class="display-2 font-weight-bold mb-3">PRESENTATION</h2>
+            <h2 class="font-weight-bold mb-3 text-uppercase text-center text-h4 text-md-h3">
+              PRESENTATION
+            </h2>
 
             <v-responsive
               class="mx-auto mb-12"
@@ -202,7 +200,9 @@
           <div class="py-12"></div>
 
           <v-container>
-            <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Téléchargement</h2>
+            <h2 class="font-weight-bold mb-3 text-uppercase text-center text-h4 text-md-h3">
+              Téléchargement
+            </h2>
 
             <v-responsive
               class="mx-auto mb-12"
@@ -252,9 +252,6 @@
           </v-container>
 
           <div class="py-6">
-            <v-container>
-              <adsbygoogle />
-            </v-container>
           </div>
         </section>
 
@@ -267,8 +264,8 @@
               <v-row class="mx-auto">
                 <v-col class="text-center text-arena" md="12">
                   <h1 class="display-3 font-weight-bold mb-4">Arène</h1>
-                  <p class="display-1 font-weight-light">Afin de pimenter la partie, une arène est placé entre toutes les bases sécuriser des équipes.
-                    Des coffre y apparaitrons et il faudra se battre pour y récuperer son contenu
+                  <p class="display-1 font-weight-light">Afin de pimenter la partie, une arène est placée entre toutes
+                    les bases sécuriser des équipes. Des coffres y apparaîtrons et il faudra se battre pour y récupérer son contenu
                   </p>
                 </v-col>
               </v-row>
@@ -290,19 +287,19 @@ export default {
         {
           src: 'img/thumbnails/maps.png',
           title: 'Maps',
-          text: 'Télécharger les mondes minecraft avec les bases de chaque équipe et l\'arène. Prêt à démarrer une partie.',
+          text: 'Télécharger les mondes minecraft avec les bases de chaque équipe et l\'arène. Prêt a démarrer une partie.',
           link: '/maps'
         },
         {
           src: 'https://media.forgecdn.net/attachments/125/517/bukkit.png',
           title: 'Le Plugins',
-          text: 'Télécharge le plugins pour l\'installer sur ton serveur Bukkit. Avec toutes les insrtuction d\'installation.',
+          text: 'Télécharge le plugin pour l\'installer sur ton serveur Bukkit. Avec toutes les instructions d\'installation.',
           link: '/plugins'
         },
         {
           src: 'img/thumbnails/stuctures.png',
           title: 'Structures',
-          text: 'Tu à envie de créer ta propre map ? Télécharge les structures des bases et de l\'arène et créer ton monde !',
+          text: 'Tu as envie de créer ta propre carte ? Télécharge les structures des bases et de l\'arène et créer ton monde !',
           link: '/structures'
         },
       ],
