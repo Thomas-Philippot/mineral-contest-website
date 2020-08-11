@@ -17,10 +17,7 @@
 </template>
 
 <script>
-import AppBar from '../components/appBar'
-import TheFooter from '../components/TheFooter'
 export default {
-  components: {TheFooter, AppBar},
   data () {
     return {
       snack: false,

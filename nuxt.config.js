@@ -3,6 +3,7 @@ require('dotenv').config()
 
 export default {
   mode: 'universal',
+  components: true,
   /*
   ** Headers of the page
   */
@@ -48,8 +49,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/firebase',
-    '@nuxtjs/google-adsense'
+    '@nuxtjs/firebase'
   ],
   sitemap: {
     hostname: 'https://mineral-contest.netlify.app'
@@ -73,10 +73,6 @@ export default {
       auth: true,
       firestore: true
     }
-  },
-  'google-adsense': {
-    id: process.env.GOOGLE_AD_ID,
-    test: true
   },
   /*
   ** vuetify module configuration

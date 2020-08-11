@@ -5,9 +5,6 @@
       <p>This page is under construction</p>
     </v-container>
     <div class="py-6">
-      <v-container>
-        <adsbygoogle />
-      </v-container>
     </div>
   </v-main>
 </template>
