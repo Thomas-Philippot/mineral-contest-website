@@ -317,7 +317,7 @@ export default {
         {
           icon: 'fa-gem',
           title: 'Coffre aléatoire',
-          text: 'Durant la partie des coffre à butin apparaissent de manière aléatoire.',
+          text: 'Durant la partie des coffres à butin apparaissent de manière aléatoire.',
         },
       ],
       stats: [
