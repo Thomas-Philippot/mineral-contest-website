@@ -49,7 +49,8 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
-    '@nuxtjs/firebase'
+    '@nuxtjs/firebase',
+    '@nuxtjs/sentry'
   ],
   sitemap: {
     hostname: 'https://mineral-contest.netlify.app'
@@ -73,6 +74,10 @@ export default {
       auth: true,
       firestore: true
     }
+  },
+  sentry: {
+    dsn: process.env.SENTRY_DSN,
+    config: {}
   },
   /*
   ** vuetify module configuration

@@ -126,7 +126,9 @@ export default {
   },
   methods: {
     async getReviews () {
-      const documents = await this.$fireStore.collection('reviews').get()
+      const documents = await this.$fireStore.collection('reviews').get().catch((e) => {
+        this.$sentry.captureException(e)
+      })
       this.loading = false
       documents.forEach(doc => {
         this.reviews.push(doc.data())
@@ -143,6 +145,8 @@ export default {
           mail: fullUser.email
         }
         this.$store.commit('setUser', user)
+      }).catch((e) => {
+        this.$sentry.captureException(e)
       })
     },
     sendReview () {
@@ -159,6 +163,8 @@ export default {
           review: '',
           rating: 0
         }
+      }).catch((e) => {
+        this.$sentry.captureException(e)
       })
     }
   }
