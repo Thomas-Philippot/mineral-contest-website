@@ -15,7 +15,7 @@
           size="50"
         >
           <v-img
-            src="img/diamond.png"
+            src="img/diamond.webp"
           ></v-img>
         </v-avatar>
       </v-btn>

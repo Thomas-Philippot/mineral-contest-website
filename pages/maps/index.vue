@@ -1,5 +1,5 @@
 <template>
-  <v-content>
+  <v-main>
     <v-container>
       <v-row>
         <v-col
@@ -46,7 +46,7 @@
         <adsbygoogle />
       </v-container>
     </div>
-  </v-content>
+  </v-main>
 </template>
 
 <script>
@@ -61,14 +61,14 @@ export default {
           description: 'Une map dans la neige, avec d\'énormes montagne à proximité.',
           biome: 'Jungle',
           name: 'snow',
-          image: '/img/maps/snow.png'
+          image: '/img/maps/snow.webp'
         },
         {
           title: 'Desert Map',
           description: 'Une map dans le desert avec de nombreuses grottes et faille.',
           biome: 'Desert',
           name: 'desert',
-          image: '/img/maps/desert.png'
+          image: '/img/maps/desert.webp'
         }
       ]
     }

@@ -5,7 +5,7 @@
           <v-row no-gutters>
             <v-img
               :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
-              src="img/main.jpg"
+              src="img/main.webp"
             >
               <v-theme-provider dark>
                 <v-container fill-height>
@@ -181,7 +181,7 @@
           >
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 1000 : 500"
-              src="/img/in-action.png"
+              src="/img/in-action.webp"
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
@@ -275,7 +275,7 @@
           >
             <v-parallax
               :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-              src="img/thumbnails/arena.png"
+              src="img/thumbnails/arena.webp"
             >
               <v-container fill-height>
                 <v-row class="mx-auto">
@@ -305,7 +305,7 @@ export default {
       statsLazy: false,
       downloads: [
         {
-          src: 'img/thumbnails/maps.png',
+          src: 'img/thumbnails/maps.webp',
           title: 'Maps',
           text: 'Télécharger les mondes minecraft avec les bases de chaque équipe et l\'arène. Prêt a démarrer une partie.',
           link: '/maps'
@@ -317,7 +317,7 @@ export default {
           link: '/plugins'
         },
         {
-          src: 'img/thumbnails/stuctures.png',
+          src: 'img/thumbnails/structures.webp',
           title: 'Structures',
           text: 'Tu as envie de créer ta propre carte ? Télécharge les structures des bases et de l\'arène et créer ton monde !',
           link: '/structures'
@@ -341,10 +341,10 @@ export default {
         },
       ],
       stats: [
-        {image: 'iron.png', altText:  'lingot de fer', value :'+10'},
-        {image: 'gold.png', altText: 'lingot d\'or', value: '+50'},
-        {image: 'diamond.png', altText: 'diamand', value: '+150'},
-        {image: 'emerald.png', altText: 'emeraude', value: '+300'},
+        {image: 'iron.webp', altText:  'lingot de fer', value :'+10'},
+        {image: 'gold.webp', altText: 'lingot d\'or', value: '+50'},
+        {image: 'diamond.webp', altText: 'diamand', value: '+150'},
+        {image: 'emerald.webp', altText: 'emeraude', value: '+300'},
       ]
     }
   },
