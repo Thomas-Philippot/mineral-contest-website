@@ -171,29 +171,38 @@
         </section>
 
         <section id="stats">
-          <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 1000 : 500"
-            src="/img/in-action.png"
+          <v-lazy
+            v-model="statsLazy"
+            min-height="200"
+            :options="{
+              threshold: .5
+            }"
+            transition="fade-transition"
           >
-            <v-container fill-height>
-              <v-row class="mx-auto">
-                <v-col
-                  v-for="item of stats"
-                  :key="item.title"
-                  cols="12"
-                  md="3"
-                >
-                  <div class="text-center">
-                    <v-img style="margin: auto" aspect-ratio="1" :src="`img/${item.image}`" :alt="item.altText" width="150"/>
-                    <div
-                      class="display-3 font-weight-black mb-4 text-center"
-                      v-text="item.value"
-                    ></div>
-                  </div>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-parallax>
+            <v-parallax
+              :height="$vuetify.breakpoint.smAndDown ? 1000 : 500"
+              src="/img/in-action.png"
+            >
+              <v-container fill-height>
+                <v-row class="mx-auto">
+                  <v-col
+                    v-for="item of stats"
+                    :key="item.title"
+                    cols="12"
+                    md="3"
+                  >
+                    <div class="text-center">
+                      <v-img style="margin: auto" aspect-ratio="1" :src="`img/${item.image}`" :alt="item.altText" width="150"/>
+                      <div
+                        class="display-3 font-weight-black mb-4 text-center"
+                        v-text="item.value"
+                      ></div>
+                    </div>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-parallax>
+          </v-lazy>
         </section>
 
         <section id="downloads">
@@ -256,21 +265,30 @@
         </section>
 
         <section id="arena">
-          <v-parallax
-            :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-            src="img/thumbnails/arena.png"
+          <v-lazy
+            v-model="arenaLazy"
+            :options="{
+              threshold: .5
+            }"
+            min-height="200"
+            transition="fade-transition"
           >
-            <v-container fill-height>
-              <v-row class="mx-auto">
-                <v-col class="text-center text-arena" md="12">
-                  <h1 class="display-3 font-weight-bold mb-4">Arène</h1>
-                  <p class="display-1 font-weight-light">Afin de pimenter la partie, une arène est placée entre toutes
-                    les bases sécuriser des équipes. Des coffres y apparaîtrons et il faudra se battre pour y récupérer son contenu
-                  </p>
-                </v-col>
-              </v-row>
-            </v-container>
-          </v-parallax>
+            <v-parallax
+              :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
+              src="img/thumbnails/arena.png"
+            >
+              <v-container fill-height>
+                <v-row class="mx-auto">
+                  <v-col class="text-center text-arena" md="12">
+                    <h1 class="display-3 font-weight-bold mb-4">Arène</h1>
+                    <p class="display-1 font-weight-light">Afin de pimenter la partie, une arène est placée entre toutes
+                      les bases sécuriser des équipes. Des coffres y apparaîtrons et il faudra se battre pour y récupérer son contenu
+                    </p>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-parallax>
+          </v-lazy>
         </section>
       </v-main>
   </div>
@@ -283,6 +301,8 @@ export default {
   },
   data () {
     return {
+      arenaLazy: false,
+      statsLazy: false,
       downloads: [
         {
           src: 'img/thumbnails/maps.png',
