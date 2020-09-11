@@ -39,8 +39,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Nuxt.js modules
@@ -50,6 +49,7 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/firebase',
+    '@nuxtjs/google-analytics',
     '@nuxtjs/sentry'
   ],
   sitemap: {
