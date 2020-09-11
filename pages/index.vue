@@ -71,18 +71,21 @@
               class="mx-auto title font-weight-light mb-8"
               max-width="720"
             >
-              Mineral Contest est un mode de jeux Minecraft, proposé par Squeezie lors de ces live du jeudi soir. Le but du jeu est de miner des ressources afin de faire gagner des points à son équipe. L'équipe qui termine la partie avec le plus de points l'emporte. Cette version est une adaptation du jeu fait par des membres du serveur discord 'Marrons'.
+              Mineral Contest est un mode de jeux Minecraft, proposé par Squeezie lors de ces live du jeudi soir.
+              Le but du jeu est de miner des ressources afin de faire gagner des points à son équipe.
+              L'équipe qui termine la partie avec le plus de points l'emporte.
+              Cette version est une adaptation du jeu.
             </v-responsive>
 
 
             <v-hover v-slot:default="{ hover }">
-              <a href="https://discord.gg/jyGaS2W" target="_blank">
+              <a href="https://discord.gg/A9jfTAN" target="_blank" style="text-decoration: none;">
                 <v-avatar
                   :class="hover ? 'elevation-14' : 'elevation-4'"
                   class="mb-12"
                   size="128"
                 >
-                  <v-img src="https://cdn.discordapp.com/icons/373604759715840001/b5bd7adfd0f4dd74321283ea745a0c4a.png"></v-img>
+                  <v-icon color="primary" size="90">fab fa-discord</v-icon>
                 </v-avatar>
               </a>
             </v-hover>
