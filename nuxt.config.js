@@ -2,7 +2,6 @@ import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
 export default {
-  mode: 'universal',
   components: true,
   /*
   ** Headers of the page
@@ -18,7 +17,8 @@ export default {
       { hid: 'description', name: 'description', content: 'Un plugin minecraft pour server Bukkit 1.14.4' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cookie' }
     ]
   },
   /*
