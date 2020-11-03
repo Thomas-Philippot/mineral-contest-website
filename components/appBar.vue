@@ -52,14 +52,16 @@
     </v-menu>
 
     <template v-slot:extension>
-      <v-tabs
-        align-with-title
-        icons-and-text
-      >
-        <v-tab nuxt to="/">Accueil</v-tab>
-        <v-tab @click="redirect">Téléchargement</v-tab>
-        <v-tab nuxt to="/reviews">Avis</v-tab>
-      </v-tabs>
+        <v-tabs
+          show-arrows
+          class="mx-2"
+        >
+          <v-tabs-slider color="teal lighten-3"></v-tabs-slider>
+          <v-tab nuxt to="/">Accueil</v-tab>
+          <v-tab @click="redirect">Téléchargement</v-tab>
+          <v-tab nuxt to="/reviews">Avis</v-tab>
+          <v-tab nuxt to="/compatibility">Versions Compatibles</v-tab>
+        </v-tabs>
     </template>
 
   </v-app-bar>
