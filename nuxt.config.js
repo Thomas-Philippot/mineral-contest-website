@@ -1,4 +1,5 @@
 import colors from 'vuetify/es5/util/colors'
+import fr from 'vuetify/lib/locale/fr'
 require('dotenv').config()
 
 export default {
@@ -86,6 +87,10 @@ export default {
     customVariables: ['~/assets/variables.scss'],
     defaultAssets: {
       icons: 'fa'
+    },
+    lang: {
+      locales: { fr },
+      current: 'fr',
     },
     theme: {
       dark: false,
