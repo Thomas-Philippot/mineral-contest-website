@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "dotenv": "^8.2.0",
     "firebase": "^7.24.0",
-    "nuxt": "^2.14.10",
+    "nuxt": "^2.14.12",
     "vuex-persistedstate": "^3.2.0"
   },
   "devDependencies": {
