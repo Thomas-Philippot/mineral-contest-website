@@ -11,12 +11,12 @@
       </v-row>
       <v-row>
         <v-col>
-          <a href="https://www.buymeacoffee.com/ThomasPhilippot">
-            <v-btn color="white" rounded>
-              <v-icon left>fa-coffee</v-icon>
-              Buy me a coffee
+          <nuxt-link to="/donation">
+            <v-btn color="amber accent-2" rounded>
+              <v-icon left>fab fa-btc</v-icon>
+              Donation
             </v-btn>
-          </a>
+          </nuxt-link>
         </v-col>
       </v-row>
     </v-container>
