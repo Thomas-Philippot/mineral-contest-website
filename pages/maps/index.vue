@@ -40,6 +40,18 @@
           </v-card>
         </v-col>
       </v-row>
+      <v-row>
+        <v-col>
+          <h3>A propos</h3>
+          Plus d'info sur les étapes d'installation d'une carte sur ton serveur.
+          <v-btn
+            color="secondary"
+            nuxt
+            to="/maps/tutorial">
+            Voir plus
+          </v-btn>
+        </v-col>
+      </v-row>
     </v-container>
     <div class="py-6">
       <v-container>
