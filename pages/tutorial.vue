@@ -36,7 +36,7 @@
 export default {
   name: "tutorial.vue",
   async asyncData ({ $content }) {
-    const page = await $content('maps/tutorial').fetch()
+    const page = await $content('tutorial').fetch()
     return {
       page
     }
