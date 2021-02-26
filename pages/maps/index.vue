@@ -47,7 +47,7 @@
           <v-btn
             color="secondary"
             nuxt
-            to="/maps/tutorial">
+            to="/tutorial">
             Voir plus
           </v-btn>
         </v-col>

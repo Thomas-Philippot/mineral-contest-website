@@ -4,7 +4,7 @@ require('dotenv').config()
 
 export default {
   components: true,
-  targert: 'static',
+  target: 'static',
   /*
   ** Headers of the page
   */
