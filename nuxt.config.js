@@ -46,6 +46,7 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
+    '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/firebase',
