@@ -4,6 +4,7 @@ require('dotenv').config()
 
 export default {
   components: true,
+  targert: 'static',
   /*
   ** Headers of the page
   */
@@ -60,6 +61,9 @@ export default {
     UserAgent: '*',
     Disallow: '',
     Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
+  },
+  content: {
+    // Options
   },
   firebase: {
     config: {
