@@ -47,7 +47,6 @@ export default {
   */
   modules: [
     '@nuxtjs/axios',
-    '@nuxt/content',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/firebase',
@@ -61,9 +60,6 @@ export default {
     UserAgent: '*',
     Disallow: '',
     Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
-  },
-  content: {
-    // Options
   },
   firebase: {
     config: {
