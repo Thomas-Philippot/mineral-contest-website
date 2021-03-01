@@ -8,7 +8,35 @@
       </v-row>
       <v-row>
         <v-col>
-          <nuxt-content :document="page" />
+          <h2>Extraire la map de son archive</h2>
+          <p>
+            Une fois votre archive `.rar` télécharger, il vous faut l'éxtraire à la racine de votre serveur.
+            Si tout s'est bien déroulé vous avez désormais un dossier `Mineral_1` dans votre serveur.
+          </p>
+
+          <v-row>
+            <v-col>
+              <img src="/img/maps/tutorial/Capture.webp" alt="main image" height="400"/>
+            </v-col>
+            <v-col>
+              <img src="/img/maps/tutorial/serveur.webp" alt="main image" height="400"/>
+            </v-col>
+          </v-row>
+          <p>
+            Ensuite, il vous suffit d'édité le fichier `server.properties`.
+            Remplacer `world` par le nom de votre dossier (ici `Mineral_1`) à la ligne `level_name`
+          </p>
+
+          <v-row>
+            <v-col>
+              <img src="/img/maps/tutorial/server2.webp" alt="main image" height="800"/>
+            </v-col>
+            <v-col>
+              <img src="/img/maps/tutorial/server1.webp" alt="main image" height="800"/>
+            </v-col>
+          </v-row>
+
+          <p>Enfin, relancer votre serveur pour charger votre nouvel map.</p>
         </v-col>
       </v-row>
       <v-row>
@@ -34,13 +62,7 @@
 
 <script>
 export default {
-  name: "tutorial.vue",
-  async asyncData ({ $content }) {
-    const page = await $content('tutorial').fetch()
-    return {
-      page
-    }
-  },
+  name: "tutorial.vue"
 }
 </script>
 
