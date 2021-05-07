@@ -1,0 +1,17 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "10:00"
+    timezone: Europe/Paris
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: nuxt
+    versions:
+    - 2.15.0
+    - 2.15.1
+  - dependency-name: "@nuxtjs/sentry"
+    versions:
+    - 5.0.1
