@@ -17,7 +17,7 @@
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sentry": "^5.0.3",
     "@nuxtjs/sitemap": "^2.4.0",
-    "dotenv": "^9.0.0",
+    "dotenv": "^9.0.2",
     "firebase": "^7.24.0",
     "nuxt": "^2.15.4",
     "vuex-persistedstate": "^3.2.0"
