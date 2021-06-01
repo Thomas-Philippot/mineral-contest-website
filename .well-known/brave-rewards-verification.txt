@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: mineral-contest.fr
-Token: 727993a375853593a8473453ec57cf000757b240f447ce2dbd0aff9204d7fcb8

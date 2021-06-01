@@ -51,15 +51,15 @@ export default {
     '@nuxtjs/robots',
     '@nuxtjs/firebase',
     '@nuxtjs/google-analytics',
-    '@nuxtjs/sentry'
+    '@nuxtjs/google-adsense'
   ],
   sitemap: {
-    hostname: 'https://mineral-contest.netlify.app'
+    hostname: 'https://mineral-contest.fr'
   },
   robots: {
     UserAgent: '*',
     Disallow: '',
-    Sitemap: 'https://mineral-contest.netlify.app/sitemap.xml'
+    Sitemap: 'https://mineral-contest.fr/sitemap.xml'
   },
   firebase: {
     config: {
@@ -69,16 +69,15 @@ export default {
       projectId: process.env.PROJECT_ID,
       storageBucket: process.env.STORAGE_BUCKET,
       messagingSenderId: process.env.MESSAGING_SENDER_ID,
-      appId: process.env.APP_ID
+      appId: process.env.APP_ID,
     },
     services: {
-      auth: true,
+      auth: {
+        ssr: true
+      },
       firestore: true
-    }
-  },
-  sentry: {
-    dsn: process.env.SENTRY_DSN,
-    config: {}
+    },
+    terminateDatabasesAfterGenerate: true
   },
   /*
   ** vuetify module configuration
@@ -110,6 +109,12 @@ export default {
   },
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  'google-adsense': {
+    id: process.env.GOOGLE_AD_ID,
+    analyticsUacct: process.env.GOOGLE_ANALYTICS_ID,
+    analyticsDomainName: 'mineral-contest.fr',
+    test: true // TODO : Change this when ads is OK
   },
   /*
   ** Build configuration
