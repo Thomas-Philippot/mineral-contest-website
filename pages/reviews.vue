@@ -66,8 +66,7 @@
         </v-card-actions>
       </v-card>
     </v-container>
-    <div class="py-6">
-    </div>
+    <Ad />
   </v-main>
 </template>
 
