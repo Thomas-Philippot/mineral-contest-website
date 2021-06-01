@@ -219,6 +219,16 @@
           </v-lazy>
         </section>
 
+        <section class="py-5">
+          <v-container>
+            <v-row>
+              <v-col>
+                <adsbygoogle />
+              </v-col>
+            </v-row>
+          </v-container>
+        </section>
+
         <section id="downloads">
           <div class="py-12"></div>
 

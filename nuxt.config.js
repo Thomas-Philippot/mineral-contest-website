@@ -50,7 +50,8 @@ export default {
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
     '@nuxtjs/firebase',
-    '@nuxtjs/google-analytics'
+    '@nuxtjs/google-analytics',
+    '@nuxtjs/google-adsense'
   ],
   sitemap: {
     hostname: 'https://mineral-contest.fr'
@@ -108,6 +109,12 @@ export default {
   },
   googleAnalytics: {
     id: process.env.GOOGLE_ANALYTICS_ID
+  },
+  'google-adsense': {
+    id: process.env.GOOGLE_AD_ID,
+    analyticsUacct: process.env.GOOGLE_ANALYTICS_ID,
+    analyticsDomainName: 'mineral-contest.fr',
+    test: true // TODO : Change this when ads is OK
   },
   /*
   ** Build configuration
