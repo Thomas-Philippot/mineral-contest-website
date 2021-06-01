@@ -109,12 +109,11 @@
           </div>
         </section>
 
-
         <section class="py-5">
           <v-container>
             <v-row>
               <v-col>
-                <iframe data-aa="1654465" src="//acceptable.a-ads.com/1654465" scrolling="no" style="border:0px; padding:0; width:100%; height:100%; overflow:hidden" allowtransparency="true"></iframe>
+                <adsbygoogle />
               </v-col>
             </v-row>
           </v-container>
@@ -217,16 +216,6 @@
               </v-container>
             </v-parallax>
           </v-lazy>
-        </section>
-
-        <section class="py-5">
-          <v-container>
-            <v-row>
-              <v-col>
-                <adsbygoogle />
-              </v-col>
-            </v-row>
-          </v-container>
         </section>
 
         <section id="downloads">
