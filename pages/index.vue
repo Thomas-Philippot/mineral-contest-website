@@ -110,7 +110,7 @@
         </section>
 
         <section class="py-5">
-          <v-container>
+          <v-container class="text-center">
             <v-row>
               <v-col>
                 <adsbygoogle />
