@@ -1,6 +1,6 @@
 <template>
   <v-container class="py-5 text-center">
-    <v-row class="text-center py-5" style="background-color: red;">
+    <v-row class="text-center py-5">
       <v-col>
         <adsbygoogle />
       </v-col>
