@@ -30,6 +30,7 @@
         </template>
       </v-data-table>
     </v-container>
+    <Ad />
   </v-main>
 </template>
 

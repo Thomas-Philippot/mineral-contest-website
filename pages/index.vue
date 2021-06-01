@@ -109,14 +109,8 @@
           </div>
         </section>
 
-        <section class="py-5">
-          <v-container>
-            <v-row>
-              <v-col>
-                <adsbygoogle />
-              </v-col>
-            </v-row>
-          </v-container>
+        <section>
+          <Ad />
         </section>
 
         <section

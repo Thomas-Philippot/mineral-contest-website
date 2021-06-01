@@ -1,3 +1,7 @@
 .wrap-text {
   -webkit-line-clamp: unset !important;
 }
+
+.v-main {
+  min-height: 90vh;
+}
