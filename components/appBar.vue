@@ -22,36 +22,38 @@
       Mineral Contest
     </v-toolbar-title>
     <v-spacer />
-    <v-avatar class="mx-2" v-if="loggedIn">
-      <v-img :src="user.avatar" />
-    </v-avatar>
-    <v-menu
-      v-if="loggedIn"
-      class="mx-2"
-      bottom
-      left
-    >
-      <template v-slot:activator="{ on, attrs }">
-        <v-btn
-          icon
-          color="primary"
-          v-bind="attrs"
-          v-on="on"
-        >
-          <v-icon>fa-ellipsis-v</v-icon>
-        </v-btn>
-      </template>
-      <v-list >
-        <v-list-item color="primary" @click="handleLogout">
-          <v-list-item-title>
-            <v-icon left>fa-sign-out-alt</v-icon>
-            Déconnexion
-          </v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-menu>
+    <client-only>
+      <v-avatar class="mx-2" v-if="loggedIn">
+        <v-img :src="user.avatar" />
+      </v-avatar>
+      <v-menu
+        v-if="loggedIn"
+        class="mx-2"
+        bottom
+        left
+      >
+        <template #activator="{ on, attrs }">
+          <v-btn
+            icon
+            color="primary"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon>fa-ellipsis-v</v-icon>
+          </v-btn>
+        </template>
+        <v-list >
+          <v-list-item color="primary" @click="handleLogout">
+            <v-list-item-title>
+              <v-icon left>fa-sign-out-alt</v-icon>
+              Déconnexion
+            </v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
+    </client-only>
 
-    <template v-slot:extension>
+    <template #extension>
         <v-tabs
           show-arrows
           class="mx-2"
