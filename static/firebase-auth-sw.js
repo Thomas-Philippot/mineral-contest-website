@@ -6,7 +6,7 @@ importScripts(
 importScripts(
   'https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js'
 )
-firebase.initializeApp({"apiKey":"AIzaSyBnGbOmoQlDGJswRgr5_oR8tCgijQj_Ac0","authDomain":"mineral-contest.firebaseapp.com","databaseURL":"https:\u002F\u002Fmineral-contest.firebaseio.com","projectId":"mineral-contest","storageBucket":"mineral-contest.appspot.com","messagingSenderId":"194505836837","appId":"1:194505836837:web:5324652dd9aa074f95f2cc"})
+firebase.initializeApp({"apiKey":undefined,"authDomain":undefined,"databaseURL":undefined,"projectId":undefined,"storageBucket":undefined,"messagingSenderId":undefined,"appId":undefined})
 
 /**
  * Returns a promise that resolves with an ID token if available.

@@ -113,8 +113,7 @@ export default {
   'google-adsense': {
     id: process.env.GOOGLE_AD_ID,
     analyticsUacct: process.env.GOOGLE_ANALYTICS_ID,
-    analyticsDomainName: 'mineral-contest.fr',
-    test: true // TODO : Change this when ads is OK
+    analyticsDomainName: 'mineral-contest.fr'
   },
   /*
   ** Build configuration
