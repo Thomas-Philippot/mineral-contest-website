@@ -23,7 +23,7 @@
                       class="font-weight-light"
                       :class="[$vuetify.breakpoint.smAndDown ? 'display-1' : 'display-2']"
                     >
-                      BIENVENUE DANS
+                      {{ $t('welcome') }}
                     </span>
 
                       <br>

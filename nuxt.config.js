@@ -103,10 +103,10 @@ export default {
       fallbackLocale: 'fr',
       messages: {
         en: {
-          welcome: 'Welcome',
+          welcome: 'Welcome to',
         },
         fr: {
-          welcome: 'Bienvenue',
+          welcome: 'Bienvenue dans',
         }
       }
     }
