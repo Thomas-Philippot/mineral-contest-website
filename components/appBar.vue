@@ -22,6 +22,12 @@
       Mineral Contest
     </v-toolbar-title>
     <v-spacer />
+    <a
+      v-for="locale in $i18n.locales"
+      :href="switchLocalePath(locale.code)"
+      :key="locale.code">
+      {{ locale.code }}
+    </a>
     <client-only>
       <v-avatar class="mx-2" v-if="loggedIn">
         <v-img :src="user.avatar" />

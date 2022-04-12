@@ -49,6 +49,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/sitemap',
     '@nuxtjs/robots',
+    '@nuxtjs/i18n',
     '@nuxtjs/firebase',
     '@nuxtjs/google-analytics',
     '@nuxtjs/google-adsense'
@@ -78,6 +79,37 @@ export default {
       firestore: true
     },
     terminateDatabasesAfterGenerate: true
+  },
+  i18n: {
+    differentDomains: true,
+    detectBrowserLanguage: false,
+    strategy: 'no_prefix',
+    locales: [
+      {
+        code: 'en',
+        name: 'English',
+        iso: 'en-US',
+        domain: 'en.mineral-contest.fr'
+      },
+      {
+        code: 'fr',
+        name: 'Français',
+        iso: 'fr-FR',
+        domain: 'mineral-contest.fr'
+      }
+    ],
+    defaultLocale: 'fr',
+    vueI18n: {
+      fallbackLocale: 'fr',
+      messages: {
+        en: {
+          welcome: 'Welcome',
+        },
+        fr: {
+          welcome: 'Bienvenue',
+        }
+      }
+    }
   },
   /*
   ** vuetify module configuration
